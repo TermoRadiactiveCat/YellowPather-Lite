@@ -9,6 +9,8 @@
 
 ## 📄 Описание (v1.0.1)
 
+**Данный проект прекратил свою поддержку в силу разработки нового Holmium File Explorer: https://github.com/TermoRadiactiveCat/Holmium-File-Explorer.git**
+
 Дорогие друзья (если таковые имеются), сегодня я хотел бы представить вам свой новый проект: **YellowPather Lite**. Это (неофициальное) продолжение устаревшей программы YellowPather, написанной на Tkinter, с использованием библиотек:
 
 - **PyQt5** — интерфейс и графика
@@ -47,13 +49,13 @@ pip install pyinstaller
 3. Дождитесь завершения и закройте терминал.
 4. Готовый .exe файл появится в папке dist. Его можно добавить в меню «Пуск» или на панель задач.
 
-Для внесения изменений: перед сборкой отредактируйте built.bat, добавив нужные папки через --add-data "папка;папка" (для Windows разделитель ;, для Linux/macOS — :).
+Для внесения изменений: перед сборкой отредактируйте built.bat, добавив нужные папки через --add-data "папка;папка" (для Windows разделитель ;, для Linux — :).
 
 ---
 
 📑 Раздел 1.2: Работа приложения
 
-YellowPather Lite — быстрое и удобное решение для повседневных задач с папками и файлами. Пока не умеет запускать самоисполняемые файлы (в целях безопасности), но в будущем появится специальный флаг.
+YellowPather Lite — быстрое и удобное решение для повседневных задач с папками и файлами. Исполняемые файлы по типу .exe, .dll, bat не поддерживаются в целях безопасности.
 
 Элементы интерфейса
 
@@ -86,7 +88,7 @@ YellowPather Lite — быстрое и удобное решение для п�
 Убедитесь, что все папки из репозитория добавлены через --add-data "папка;папка" с правильным разделителем:
 
 · Windows — ;
-· Linux/macOS — :
+· Linux — :
 
 Важно: готовые исполняемые файлы теперь доступны во вкладке Releases.
 
@@ -95,7 +97,7 @@ YellowPather Lite — быстрое и удобное решение для п�
 Причина обычно в отсутствии прав на чтение/запись.
 
 · На Windows используется ctypes/GetLogicalDrives(), проблема редка.
-· На Linux/macOS приложение сканирует /proc/mounts, но может не учитывать реальные точки монтирования.
+· На Linux приложение сканирует /proc/mounts, но может не учитывать реальные точки монтирования.
 
 Решение для SD-карт: проверьте переключатель Lock (защита от записи). Если он активен — отключите и нажмите Update.
 Storage Menu показывает только доступные в данный момент диски. Работа с сетевыми томами не гарантирована.
@@ -108,8 +110,8 @@ YellowPather Lite — кроссплатформенное приложение:
 
 ОС Поддержка
 Windows 7, 8, 10, 11 ✅ полная
-macOS ✅ (требует установки PyQt5, Psutil)
 Linux ✅ (проверьте /proc/mounts для работы с дисками)
+MacOS ❌ не поддерживается
 Android / iOS ❌ не поддерживается
 
 ---
@@ -138,6 +140,8 @@ pip install -r requirements.txt
 🇬🇧 English Version
 
 📄 Description (v1.0.1)
+
+**This project is no longer supported, as a new one is being developed Holmium File Explorer: https://github.com/TermoRadiactiveCat/Holmium-File-Explorer.git**
 
 Dear friends (if any exist), today I would like to introduce you to my new project: YellowPather Lite. It is basically an (unofficial) continuation of the outdated Tkinter-based program YellowPather, using libraries such as:
 
@@ -177,13 +181,13 @@ Building the application
 3. Wait for completion and close the terminal.
 4. The built .exe file will appear in the dist folder. You can pin it to the Start menu or taskbar.
 
-Making changes: edit built.bat before building, adding folders via --add-data "folder;folder" (separator ; for Windows, : for Linux/macOS).
+Making changes: edit built.bat before building, adding folders via --add-data "folder;folder" (separator ; for Windows, : for Linux).
 
 ---
 
 📑 Section 1.2: Application usage
 
-YellowPather Lite is a fast and convenient solution for everyday tasks with folders and files. For security reasons, it cannot run self-executable files yet, but a permission flag is planned.
+YellowPather Lite is a fast and convenient solution for everyday tasks with folders and files. Executable files this type .exe, .dll, bat are not supported for security reasons.
 
 Interface elements
 
@@ -216,7 +220,7 @@ Interface elements
 Make sure all folders from the repository are added via --add-data "folder;folder" with the correct separator:
 
 · Windows — ;
-· Linux/macOS — :
+· Linux — :
 
 Note: ready-made executables are now available in the Releases tab.
 
@@ -225,7 +229,7 @@ Note: ready-made executables are now available in the Releases tab.
 Usually caused by missing read/write permissions.
 
 · On Windows ctypes/GetLogicalDrives() is used, so issues are rare.
-· On Linux/macOS the app scans /proc/mounts but may not account for actual mount points.
+· On Linux the app scans /proc/mounts but may not account for actual mount points.
 
 Solution for SD cards: check the Lock switch (write protection). If it is active, turn it off and press Update.
 Storage Menu shows only currently available drives. Network volumes are not guaranteed to work.
@@ -238,8 +242,8 @@ YellowPather Lite is cross-platform:
 
 OS Support
 Windows 7, 8, 10, 11 ✅ full
-macOS ✅ (requires PyQt5, Psutil installed)
 Linux ✅ (check /proc/mounts for drive access)
+MacOS ❌ not supported
 Android / iOS ❌ not supported
 
 ---
